@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <title><![CDATA[plxSocialMeta]]></title>
+	<author><![CDATA[Petitchevalroux]]></author>
+	<version>0.0.1</version>
+    <date>19/11/2014</date>
+    <site>https://github.com/petitchevalroux/plxSocialMeta</site>
+    <description><![CDATA[Ajoute les balises meta opengraph (Facebook), schema.org (Google Plus), Twittercard (Twitter) sur les articles.]]></description>
+	<requirements></requirements>
+</document>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<document>
+    <parameter name="opengraph_enabled" type="numeric">1</parameter>
+    <parameter name="schemaorg_enabled" type="numeric">0</parameter>
+    <parameter name="twittercard_enabled" type="numeric">0</parameter>
+    <parameter name="twittercard_type" type="string"></parameter>
+    <parameter name="twittercard_site" type="string"></parameter>
+    <parameter name="twittercard_creator" type="string"></parameter>
+</document>
