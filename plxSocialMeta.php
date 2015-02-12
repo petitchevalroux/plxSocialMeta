@@ -23,7 +23,7 @@ class plxSocialMeta extends plxPlugin
     {
         ob_start();
         $plxShow->pageTitle();
-        return ob_get_clean();
+        return html_entity_decode(ob_get_clean());
     }
 
     /**
@@ -53,11 +53,12 @@ class plxSocialMeta extends plxPlugin
      */
     private function articleDescription($plxShow)
     {
-        $description = trim($plxShow->plxMotor->plxRecord_arts->f('meta_description'));
-        if (empty($description) && !empty($plxShow->plxMotor->aConf['meta_description'])) {
-            $description = trim($plxShow->plxMotor->aConf['meta_description']);
-        }
-        return $description;
+		ob_start();
+		$plxShow->meta('description');
+		$plxdescription = ob_get_clean();
+		preg_match("/<meta[^>]*name=[\"|\']description[\"|\'][^>]*content=[\"]([^\"]*)[\"][^>]*>/i", $plxdescription, $description);
+		//echo "<pre>"; var_dump(array_filter($description)); echo "</pre>"; exit;
+		return html_entity_decode($description[1]);
     }
 
     /**
